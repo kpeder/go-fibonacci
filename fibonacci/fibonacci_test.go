@@ -8,7 +8,7 @@ import (
 )
 
 func TestVersion(t *testing.T) {
-	//store the Go version is at least 1.21
+	//store the Go version
 	goversion := runtime.Version()
 	expectedversion := "go1.21"
 
