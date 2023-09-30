@@ -2,16 +2,31 @@ package main
 
 import (
 	"flag"
-	"github.com/stretchr/testify/assert"
+	"runtime"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
+
+func TestVersion(t *testing.T) {
+	//store the Go version
+	goversion := runtime.Version()
+	expectedversion := "go1.21"
+
+	//test that the Go version is at least 1.21
+	if assert.GreaterOrEqual(t, goversion, expectedversion) {
+		t.Logf("Go runtime version check PASSED, expected version >= '%s', got '%s'", expectedversion, goversion)
+	} else {
+		t.Errorf("Go runtime version check FAILED, expected version >= '%s', got '%s'", expectedversion, goversion)
+	}
+}
 
 func TestSeq(t *testing.T) {
 	flag.Parse()
 	iter := *iter
 
 	//set the control sequence
-	fibonacci := []int{0,1,1,2,3,5,8,13,21,34,55,89}
+	fibonacci := []int{0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89}
 
 	//execute the function and report result
 	sequence := Seq(iter, 0, 1)

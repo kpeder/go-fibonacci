@@ -32,11 +32,14 @@ user@host:~:~/Projects/go-fibonacci/fibonacci$ go run fibonacci -iter 13
 
 ### Run Tests
 ```
-user@host:~/Projects/go-fibonacci/fibonacci$ go test -v -iter 12
+user@host:~/Projects/go-fibonacci/fibonacci$ go test fibonacci -v -iter 12
+=== RUN   TestVersion
+    fibonacci_test.go:17: Go runtime version check PASSED, expected version >= 'go1.21', got 'go1.21.1'
+--- PASS: TestVersion (0.00s)
 === RUN   TestSeq
-    fibonacci_test.go:21: Seq(12) PASSED, expected length 12, got 12
-    fibonacci_test.go:28: Seq(12) PASSED, expected sequence [0 1 1 2 3 5 8 13 21 34 55 89], got [0 1 1 2 3 5 8 13 21 34 55 89]
+    fibonacci_test.go:35: Seq(12) PASSED, expected length 12, got 12
+    fibonacci_test.go:42: Seq(12) PASSED, expected sequence [0 1 1 2 3 5 8 13 21 34 55 89], got [0 1 1 2 3 5 8 13 21 34 55 89]
 --- PASS: TestSeq (0.00s)
 PASS
-ok      fibonacci       0.009s
+ok      fibonacci       0.002s
 ```
