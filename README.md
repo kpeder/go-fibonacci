@@ -22,12 +22,17 @@ go: to add module requirements and sums:
 user@host:~/Projects/go-fibonacci/fibonacci$ go mod tidy
 go: finding module for package github.com/stretchr/testify/assert
 go: found github.com/stretchr/testify/assert in github.com/stretchr/testify v1.8.4
+user@host:~/Projects/go-fibonacci/fibonacci$ mkdir ../bin
+user@host:~/Projects/go-fibonacci/fibonacci$ go build -o ../bin .
 ```
 
 ### Execution
 ```
 user@host:~:~/Projects/go-fibonacci/fibonacci$ go run fibonacci -iter 13
 [0 1 1 2 3 5 8 13 21 34 55 89 144]
+user@host:~:~/Projects/go-fibonacci/fibonacci$ cd ../bin
+user@host:~:~/Projects/go-fibonacci/bin$ ./fibonacci -iter 9
+[0 1 1 2 3 5 8 13 21]
 ```
 
 ### Run Tests
@@ -45,7 +50,6 @@ ok      fibonacci       0.002s
 ```
 
 ### Make Targets
-Run build and tests using make targets:
 ```
 user@host:~/Projects/go-fibonacci$ make help
 make <target>
