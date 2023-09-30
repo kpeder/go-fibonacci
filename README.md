@@ -43,3 +43,19 @@ user@host:~/Projects/go-fibonacci/fibonacci$ go test fibonacci -v -iter 12
 PASS
 ok      fibonacci       0.002s
 ```
+
+### Make Targets
+Run build and tests using make targets:
+```
+user@host:~/Projects/go-fibonacci$ make help
+make <target>
+
+Targets:
+
+    help    Show this help
+
+    build   Build the fibonacci package
+    clean   Clean up build files
+    init    Initialize fibonacci module
+    test    Run the fibonacci package tests
+```
