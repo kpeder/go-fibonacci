@@ -29,7 +29,7 @@ func TestSeq(t *testing.T) {
 	fibonacci := []int{0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89}
 
 	//execute the function and report result
-	sequence := Seq(iter, 0, 1)
+	sequence := Seq(iter)
 
 	//test function generates a sequence of appropriate length and report result
 	if assert.Len(t, sequence, iter) {
