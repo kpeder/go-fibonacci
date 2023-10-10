@@ -2,6 +2,12 @@
 Program to generate an array containing the Fibonacci sequence,
 and to demonstrate test patterns in Go.
 
+### Decision Records
+This repository uses architecture decision records to record design decisions
+about important elements of the solution.
+
+The ADR index is available [here](./docs/decisions/index.md).
+
 ### Requirements
 Tested on Go version 1.21.
 
