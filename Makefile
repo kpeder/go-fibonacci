@@ -17,10 +17,10 @@ build: clean init test
 	@cd fibonacci && mkdir ../bin; go build -o ../bin .
 
 clean:
-	@cd fibonacci && rm -rf ../bin
+	@cd fibonacci && rm -rf ../bin go.*
 
 init: clean
-	@cd fibonacci && rm -f go.*; go mod init fibonacci; go mod tidy
+	@cd fibonacci && go mod init fibonacci; go mod tidy
 
 test: clean init
 	@cd fibonacci && go test fibonacci -iter 12 -v -cover
