@@ -10,19 +10,11 @@ var (
 )
 
 func Seq(iter int) (seq []int) {
-	// define local vars
-	var (
-		i, n int
-		x, y int = 0, 1
-	)
 	// initialize with seed values
-	seq = append(seq, x, y)
+	seq = append(seq, 0, 1)
 	// iterate until length iter is reached
-	for i = 2; i < iter; i++ {
-		n = x + y
-		x = y
-		y = n
-		seq = append(seq, n)
+	for i := 2; i < iter; i++ {
+		seq = append(seq, seq[i-1]+seq[i-2])
 	}
 	// return the sequence
 	return
