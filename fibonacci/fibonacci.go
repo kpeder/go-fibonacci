@@ -6,7 +6,7 @@ import (
 )
 
 var (
-	iter *int = flag.Int("iter", 12, "length of the fibonacci sequence to generate")
+	iter *int = flag.Int("iter", 14, "length of the fibonacci sequence to generate")
 )
 
 func Seq(iter int) (seq []int) {

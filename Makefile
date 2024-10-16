@@ -23,4 +23,4 @@ init: clean
 	@cd fibonacci && go mod init fibonacci; go mod tidy
 
 test: clean init
-	@cd fibonacci && go test fibonacci -iter 12 -v -cover
+	@cd fibonacci && go test fibonacci -iter 14 -v -cover
